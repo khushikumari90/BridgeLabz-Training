@@ -5,21 +5,21 @@ public class HotelBooking {
     String roomType;
     int nights;
 
-    // 1️⃣ Default constructor
+    // 1️ Default constructor
     HotelBooking() {
         guestName = "Guest";
         roomType = "Standard";
         nights = 1;
     }
 
-    // 2️⃣ Parameterized constructor
+    // 2️ Parameterized constructor
     HotelBooking(String guestName, String roomType, int nights) {
         this.guestName = guestName;
         this.roomType = roomType;
         this.nights = nights;
     }
 
-    // 3️⃣ Copy constructor
+    // 3️ Copy constructor
     HotelBooking(HotelBooking other) {
         this.guestName = other.guestName;
         this.roomType = other.roomType;
