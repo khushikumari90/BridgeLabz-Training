@@ -9,7 +9,7 @@ public class CarRental {
     // Cost per day (can vary by model in real systems)
     static final double COST_PER_DAY = 1500.0;
 
-    // 1️⃣ Default constructor
+    // 1️ Default constructor
     CarRental() {
         customerName = "Customer";
         carModel = "Hatchback";
@@ -17,7 +17,7 @@ public class CarRental {
         calculateTotalCost();
     }
 
-    // 2️⃣ Parameterized constructor
+    // 2️ Parameterized constructor
     CarRental(String customerName, String carModel, int rentalDays) {
         this.customerName = customerName;
         this.carModel = carModel;
