@@ -49,6 +49,7 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Arrays & Strings
 - Utility Programs
 - Scenario-Based Exercises
+- Leetcode Problems
 
 ## Object Oriented Programming Fundamentals
 - Class & Objects
@@ -57,7 +58,12 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Object Modeling, Class Diagram
 - Inheritance
 - Encapsulation, Polymorphism, Interface and Abstract Class
-  
+- Scenario-Based Excercises
+- Leetcode Problems
+
+## Data Structure
+- Linkedlist
+- Stack , Queue, HashMap and Hashing Function
 ## 📊 Progress Tracking
 
 This repository serves as a comprehensive record of my learning journey, highlighting:
@@ -92,8 +98,28 @@ This repository serves as a comprehensive record of my learning journey, highlig
 
 - 31-Dec-2025 (Wednesday) : Learned Classes, Objects, Constructors, Instance & Static variables
   
-- 01-Jan-2026 (Thursday) : Learned this , static and final keyword and implemented it
+- 01-Jan-2026 (Thursday) : Learned this , static and final keyword and completed assigned practice set
 
+- 02-Jan-2026 (Friday) : Learned Object Oriented Design Principles and completed assigned practice set
+
+- 03-Jan-2026 (Saturday) : Learned Inheritance and its types and completed assigned practice set
+
+- 04-Jan-2026 (Sunday) : Learned Encapsulation, Interface, Abstract Classes, and Polymorphism
+
+- 05-Jan-2026 (Monday) : Completed the assigned practice set of Encapsulation, Interface, Abstract Classes, and Polymorphism
+
+- 06-Jan-2026 (Tuesday) : Completed scenario based and leetcode problems
+
+- 07-Jan-2026 (Wednesday) : Learned Linkedlist
+
+- 08-Jan-2026 (Thursday) : Completed the assigned practice set of Linkedlist
+
+- 09-Jan-2026 (Friday) : Learned Stack , Queue, HashMap and Hashing Function
+
+
+- 10-Jan-2026 (Saturday) : Practiced Leetcode problems
+
+- 11-Jan-2026 (Sunday) : Practiced Scenario based problems
 
 ## 🌟 Growth Journey
 This repository reflects my dedication, problem-solving skills, and consistent growth as a Java trainee at BridgeLabz.
