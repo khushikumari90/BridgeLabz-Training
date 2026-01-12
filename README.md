@@ -50,18 +50,14 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Utility Programs
 - Scenario-Based Exercises
 
-## 🔜 Next Steps
-
-- Dive into OOP Concepts:
-  - Object Classes
-  - Consructors
-  - Encapsulation
-  - Inheritance
-  - Polymorphism
-  - Abstraction
-- Implement OOP exercises in a separate branch
-- Continue solving LeetCode Java problems
-
+- Object Oriented Programming Fundamentals
+- Class & Objects
+- Java Constructors, Instance vs. Class Variables, Access Modifiers Concepts
+- this, static, final key words and instanceof operator Content 
+- Object Modeling, Class Diagram
+- Inheritance
+- Encapsulation, Polymorphism, Interface and Abstract Class
+  
 ## 📊 Progress Tracking
 
 This repository serves as a comprehensive record of my learning journey, highlighting:
@@ -71,14 +67,11 @@ This repository serves as a comprehensive record of my learning journey, highlig
  - Clean, well-documented, maintainable code
 
 ## 🗓 Learning Progress Summary
-### Week 1 – Java Fundamentals
 
 - 20-Dec-2025 (Saturday): Studied Java basics and variables; solved elementary problems
 
 - 21-Dec-2025 (Sunday): Practiced loops, conditional statements, and control flow
-
-### Week 2 - Arrays And Strings
-
+- 
 - 22-Dec-2025 (Monday) : Solved basic practice problems
 
 - 23-Dec-2025 (Tuesday) : Completed assigned practice set
@@ -92,8 +85,6 @@ This repository serves as a comprehensive record of my learning journey, highlig
 - 27-Dec-2025 (Saturday) : Implemented scenario-based problem solutions
 
 - 28-Dec-2025 (Sunday) : Practiced Java Date & Time API
-
-### Week 3 - Scenario Based And OOPs Concept
 
 - 29-Dec-2025 (Monday) : Completed Employee Wage Computation scenario and LeetCode problem
 
