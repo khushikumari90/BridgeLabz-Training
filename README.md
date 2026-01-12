@@ -71,7 +71,7 @@ This repository serves as a comprehensive record of my learning journey, highlig
 - 20-Dec-2025 (Saturday): Studied Java basics and variables; solved elementary problems
 
 - 21-Dec-2025 (Sunday): Practiced loops, conditional statements, and control flow
-- 
+  
 - 22-Dec-2025 (Monday) : Solved basic practice problems
 
 - 23-Dec-2025 (Tuesday) : Completed assigned practice set
@@ -92,7 +92,7 @@ This repository serves as a comprehensive record of my learning journey, highlig
 
 - 31-Dec-2025 (Wednesday) : Learned Classes, Objects, Constructors, Instance & Static variables
   
-- 01-Jan-2026 (Thursday) : Learned this , ststic and final keyword and implemented it
+- 01-Jan-2026 (Thursday) : Learned this , static and final keyword and implemented it
 
 
 ## 🌟 Growth Journey
