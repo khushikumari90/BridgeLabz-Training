@@ -3,6 +3,8 @@ BridgeLabz-Training
 ## 👤 Trainee Details
 
 Name: Khushi Kumari
+
+
 Organization: BridgeLabz Solutions Pvt. Ltd.
 
 ## 📖 About This Repository
