@@ -43,14 +43,14 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 
 ### Completed Topics:
 
-- Core Java Fundamentals
+## Core Java Fundamentals
 - Control Flow (loops, conditions)
 - Methods & Functions
 - Arrays & Strings
 - Utility Programs
 - Scenario-Based Exercises
 
-- Object Oriented Programming Fundamentals
+## Object Oriented Programming Fundamentals
 - Class & Objects
 - Java Constructors, Instance vs. Class Variables, Access Modifiers Concepts
 - this, static, final key words and instanceof operator Content 
