@@ -118,10 +118,16 @@ This repository serves as a comprehensive record of my learning journey, highlig
 
 - 09-Jan-2026 (Friday) : Learned Stack , Queue, HashMap and Hashing Function
 
-
 - 10-Jan-2026 (Saturday) : Practiced Leetcode problems
 
 - 11-Jan-2026 (Sunday) : Practiced Scenario based problems
+
+- 12-Jan-2026 (Monday) : Practiced Scenario Based problems on OOPS
+
+- 13-Jan-2026 (Tuesday) : Completed the assigned practice set of Scenario based problems
+
+- 14-Jan-2026 (Wednesday) : Learned Stack , Queue, HashMap and Hashing Function
+
 
 ## 🌟 Growth Journey
 This repository reflects my dedication, problem-solving skills, and consistent growth as a Java trainee at BridgeLabz.
