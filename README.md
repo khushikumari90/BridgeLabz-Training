@@ -66,6 +66,9 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 ## Data Structure
 - Linkedlist
 - Stack , Queue, HashMap and Hashing Function
+- Sorting Algorithms
+- Linear Search and Binary Search, StringBuilder, StringBuffer, BufferedReader, FileReader, InputStreamReader
+  
 ## 📊 Progress Tracking
 
 This repository serves as a comprehensive record of my learning journey, highlighting:
@@ -127,6 +130,10 @@ This repository serves as a comprehensive record of my learning journey, highlig
 - 13-Jan-2026 (Tuesday) : Completed the assigned practice set of Scenario based problems
 
 - 14-Jan-2026 (Wednesday) : Learned Stack , Queue, HashMap and Hashing Function
+
+- 15-Jan-2026 (Thursday) : Completed the assigned practice set of Stack , Queue, HashMap and Hashing Function
+
+- 16-Jan-2026 (Friday) : Learned Sorting Algorthims Bubble Sort,Selection Sort,Insertion Sort,Merge Sort,Quick Sort,Heap Sort,Counting Sort
 
 
 ## 🌟 Growth Journey
