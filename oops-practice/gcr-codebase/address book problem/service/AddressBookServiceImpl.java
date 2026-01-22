@@ -1,9 +1,13 @@
 package service;
 
+import model.AddressBook;
 import model.Contact;
 import repository.AddressBookRepository;
 import repository.AddressBookRepositoryImpl;
 
+import java.util.Map;
+
+// Service implementation
 public class AddressBookServiceImpl
         implements AddressBookService {
 
@@ -11,22 +15,27 @@ public class AddressBookServiceImpl
             new AddressBookRepositoryImpl();
 
     @Override
-    public void addContact(Contact contact) {
-        repository.addContact(contact);
+    public void createAddressBook(String name) {
+        repository.createAddressBook(name);
     }
 
     @Override
-    public void addContactUsingAddressBook(Contact contact) {
-        repository.addContactUsingAddressBook(contact);
+    public Map<String, AddressBook> getAllAddressBooks() {
+        return repository.getAllAddressBooks();
     }
 
     @Override
-    public boolean editContactByName(String firstName, Contact updatedContact) {
-        return repository.editContactByName(firstName, updatedContact);
+    public void addContact(String bookName, Contact contact) {
+        repository.addContact(bookName, contact);
     }
 
     @Override
-    public boolean deleteContactByName(String firstName) {
-        return repository.deleteContactByName(firstName);
+    public boolean editContact(String bookName, String firstName, Contact updated) {
+        return repository.editContact(bookName, firstName, updated);
+    }
+
+    @Override
+    public boolean deleteContact(String bookName, String firstName) {
+        return repository.deleteContact(bookName, firstName);
     }
 }

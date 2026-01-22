@@ -1,5 +1,6 @@
 package model;
 
+// UC1: Ability to create a Contact with all personal details
 public class Contact {
 
     private String firstName;
@@ -11,6 +12,7 @@ public class Contact {
     private String phoneNumber;
     private String email;
 
+    // UC1: Create contact using constructor
     public Contact(String firstName, String lastName,
                    String address, String city,
                    String state, String zip,
@@ -26,38 +28,19 @@ public class Contact {
         this.email = email;
     }
 
-    // Getters
     public String getFirstName() {
         return firstName;
     }
 
-    // Setters (used in UC3)
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    // UC3: Update existing contact details
+    public void update(Contact updated) {
+        this.lastName = updated.lastName;
+        this.address = updated.address;
+        this.city = updated.city;
+        this.state = updated.state;
+        this.zip = updated.zip;
+        this.phoneNumber = updated.phoneNumber;
+        this.email = updated.email;
     }
 
     @Override

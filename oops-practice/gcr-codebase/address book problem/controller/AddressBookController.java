@@ -1,49 +1,40 @@
 package controller;
 
+import model.AddressBook;
 import model.Contact;
 import service.AddressBookService;
 import service.AddressBookServiceImpl;
 
-import java.util.Scanner;
+import java.util.Map;
 
+// Controller layer: connects Main with Service
 public class AddressBookController {
 
     private final AddressBookService service =
             new AddressBookServiceImpl();
-    private final Scanner scanner = new Scanner(System.in);
 
-    public void createContact() {
+    // UC6: Create Address Book
+    public void createAddressBook(String name) {
+        service.createAddressBook(name);
+    }
 
-        System.out.print("Enter First Name: ");
-        String firstName = scanner.nextLine();
+    // UC6: Get all Address Books
+    public Map<String, AddressBook> getAllAddressBooks() {
+        return service.getAllAddressBooks();
+    }
 
-        System.out.print("Enter Last Name: ");
-        String lastName = scanner.nextLine();
+    // UC1, UC2, UC5: Add contact
+    public void addContact(String bookName, Contact contact) {
+        service.addContact(bookName, contact);
+    }
 
-        System.out.print("Enter Address: ");
-        String address = scanner.nextLine();
+    // UC3: Edit contact
+    public boolean editContact(String bookName, String firstName, Contact updated) {
+        return service.editContact(bookName, firstName, updated);
+    }
 
-        System.out.print("Enter City: ");
-        String city = scanner.nextLine();
-
-        System.out.print("Enter State: ");
-        String state = scanner.nextLine();
-
-        System.out.print("Enter Zip: ");
-        String zip = scanner.nextLine();
-
-        System.out.print("Enter Phone Number: ");
-        String phoneNumber = scanner.nextLine();
-
-        System.out.print("Enter Email: ");
-        String email = scanner.nextLine();
-
-        Contact contact = new Contact(
-                firstName, lastName, address,
-                city, state, zip,
-                phoneNumber, email
-        );
-
-        service.addContact(contact);
+    // UC4: Delete contact
+    public boolean deleteContact(String bookName, String firstName) {
+        return service.deleteContact(bookName, firstName);
     }
 }

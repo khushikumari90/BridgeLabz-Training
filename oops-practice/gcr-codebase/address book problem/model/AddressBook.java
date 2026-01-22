@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+// UC2: AddressBook HAS-A relationship with Contact
 public class AddressBook {
 
-    private final List<Contact> contacts;
+    // UC5: Use Collection to store multiple contacts
+    private final List<Contact> contacts = new ArrayList<>();
 
-    public AddressBook() {
-        this.contacts = new ArrayList<>();
-    }
-
+    // UC2 / UC5: Add contact to Address Book
     public void addContact(Contact contact) {
         contacts.add(contact);
     }
 
-    public Contact findContactByFirstName(String firstName) {
+    // UC3 / UC4: Find contact using first name
+    public Contact findByFirstName(String firstName) {
         for (Contact contact : contacts) {
             if (contact.getFirstName().equalsIgnoreCase(firstName)) {
                 return contact;
@@ -25,11 +25,21 @@ public class AddressBook {
         return null;
     }
 
-    public boolean deleteContactByFirstName(String firstName) {
+    // UC3: Edit existing contact using name
+    public boolean editContact(String firstName, Contact updated) {
+        Contact existing = findByFirstName(firstName);
+        if (existing != null) {
+            existing.update(updated);
+            return true;
+        }
+        return false;
+    }
+
+    // UC4: Delete person using name
+    public boolean deleteContact(String firstName) {
         Iterator<Contact> iterator = contacts.iterator();
         while (iterator.hasNext()) {
-            Contact contact = iterator.next();
-            if (contact.getFirstName().equalsIgnoreCase(firstName)) {
+            if (iterator.next().getFirstName().equalsIgnoreCase(firstName)) {
                 iterator.remove();
                 return true;
             }
