@@ -24,4 +24,9 @@ public class AddressBookServiceImpl
     public boolean editContactByName(String firstName, Contact updatedContact) {
         return repository.editContactByName(firstName, updatedContact);
     }
+
+    @Override
+    public boolean deleteContactByName(String firstName) {
+        return repository.deleteContactByName(firstName);
+    }
 }

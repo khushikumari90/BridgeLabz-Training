@@ -12,4 +12,7 @@ public interface AddressBookRepository {
 
     // UC3
     boolean editContactByName(String firstName, Contact updatedContact);
+
+    // UC4
+    boolean deleteContactByName(String firstName);
 }

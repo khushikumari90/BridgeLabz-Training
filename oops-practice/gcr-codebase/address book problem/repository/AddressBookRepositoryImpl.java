@@ -12,7 +12,7 @@ public class AddressBookRepositoryImpl
     // UC1 storage
     private final List<Contact> contactList = new ArrayList<>();
 
-    // UC2 + UC3 storage
+    // UC2–UC4 storage
     private final AddressBook addressBook = new AddressBook();
 
     // UC1
@@ -37,7 +37,7 @@ public class AddressBookRepositoryImpl
                 addressBook.findContactByFirstName(firstName);
 
         if (existingContact != null) {
-            existingContact.setLastName(updatedContact.getFirstName());
+            existingContact.setLastName(updatedContact.toString());
             existingContact.setAddress(updatedContact.toString());
             existingContact.setCity(updatedContact.toString());
             existingContact.setState(updatedContact.toString());
@@ -47,5 +47,11 @@ public class AddressBookRepositoryImpl
             return true;
         }
         return false;
+    }
+
+    // UC4
+    @Override
+    public boolean deleteContactByName(String firstName) {
+        return addressBook.deleteContactByFirstName(firstName);
     }
 }

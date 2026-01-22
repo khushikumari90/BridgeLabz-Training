@@ -48,44 +48,15 @@ public class Main {
         service.addContact(contact);
         service.addContactUsingAddressBook(contact);
 
-        // UC3: Edit Contact
-        System.out.println("\nEdit Contact");
-        System.out.print("Enter First Name to Edit: ");
-        String editName = scanner.nextLine();
+        // UC4: Delete Contact
+        System.out.println("\nDelete Contact");
+        System.out.print("Enter First Name to Delete: ");
+        String deleteName = scanner.nextLine();
 
-        System.out.print("New Last Name: ");
-        String newLastName = scanner.nextLine();
+        boolean isDeleted = service.deleteContactByName(deleteName);
 
-        System.out.print("New Address: ");
-        String newAddress = scanner.nextLine();
-
-        System.out.print("New City: ");
-        String newCity = scanner.nextLine();
-
-        System.out.print("New State: ");
-        String newState = scanner.nextLine();
-
-        System.out.print("New Zip: ");
-        String newZip = scanner.nextLine();
-
-        System.out.print("New Phone: ");
-        String newPhone = scanner.nextLine();
-
-        System.out.print("New Email: ");
-        String newEmail = scanner.nextLine();
-
-        Contact updatedContact = new Contact(
-                editName, newLastName,
-                newAddress, newCity,
-                newState, newZip,
-                newPhone, newEmail
-        );
-
-        boolean isUpdated =
-                service.editContactByName(editName, updatedContact);
-
-        if (isUpdated) {
-            System.out.println("Contact updated successfully (UC3).");
+        if (isDeleted) {
+            System.out.println("Contact deleted successfully (UC4).");
         } else {
             System.out.println("Contact not found.");
         }

@@ -26,11 +26,12 @@ public class Contact {
         this.email = email;
     }
 
-    // Getters & Setters (needed for UC3)
+    // Getters
     public String getFirstName() {
         return firstName;
     }
 
+    // Setters (used in UC3)
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
