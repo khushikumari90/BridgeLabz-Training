@@ -3,5 +3,10 @@ package service;
 import model.Contact;
 
 public interface AddressBookService {
+
+    // UC1
     void addContact(Contact contact);
+
+    // UC2
+    void addContactUsingAddressBook(Contact contact);
 }
