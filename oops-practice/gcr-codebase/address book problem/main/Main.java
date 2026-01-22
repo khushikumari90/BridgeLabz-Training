@@ -13,52 +13,51 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         AddressBookService service = new AddressBookServiceImpl();
 
-        // Add Contact (UC1 + UC2)
-        System.out.println("Add Contact");
-        System.out.print("First Name: ");
-        String firstName = scanner.nextLine();
+        System.out.println("Add Multiple Contacts to Address Book");
 
-        System.out.print("Last Name: ");
-        String lastName = scanner.nextLine();
+        while (true) {
 
-        System.out.print("Address: ");
-        String address = scanner.nextLine();
+            System.out.print("\nEnter First Name: ");
+            String firstName = scanner.nextLine();
 
-        System.out.print("City: ");
-        String city = scanner.nextLine();
+            System.out.print("Enter Last Name: ");
+            String lastName = scanner.nextLine();
 
-        System.out.print("State: ");
-        String state = scanner.nextLine();
+            System.out.print("Enter Address: ");
+            String address = scanner.nextLine();
 
-        System.out.print("Zip: ");
-        String zip = scanner.nextLine();
+            System.out.print("Enter City: ");
+            String city = scanner.nextLine();
 
-        System.out.print("Phone: ");
-        String phone = scanner.nextLine();
+            System.out.print("Enter State: ");
+            String state = scanner.nextLine();
 
-        System.out.print("Email: ");
-        String email = scanner.nextLine();
+            System.out.print("Enter Zip: ");
+            String zip = scanner.nextLine();
 
-        Contact contact = new Contact(
-                firstName, lastName,
-                address, city, state,
-                zip, phone, email
-        );
+            System.out.print("Enter Phone Number: ");
+            String phone = scanner.nextLine();
 
-        service.addContact(contact);
-        service.addContactUsingAddressBook(contact);
+            System.out.print("Enter Email: ");
+            String email = scanner.nextLine();
 
-        // UC4: Delete Contact
-        System.out.println("\nDelete Contact");
-        System.out.print("Enter First Name to Delete: ");
-        String deleteName = scanner.nextLine();
+            Contact contact = new Contact(
+                    firstName, lastName,
+                    address, city, state,
+                    zip, phone, email
+            );
 
-        boolean isDeleted = service.deleteContactByName(deleteName);
+            // UC5: add multiple contacts
+            service.addContactUsingAddressBook(contact);
 
-        if (isDeleted) {
-            System.out.println("Contact deleted successfully (UC4).");
-        } else {
-            System.out.println("Contact not found.");
+            System.out.print("\nDo you want to add another contact? (yes/no): ");
+            String choice = scanner.nextLine();
+
+            if (!choice.equalsIgnoreCase("yes")) {
+                break;
+            }
         }
+
+        System.out.println("\nAll contacts added successfully.");
     }
 }
