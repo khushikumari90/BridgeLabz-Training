@@ -10,15 +10,18 @@ public class AddressBookServiceImpl
     private final AddressBookRepository repository =
             new AddressBookRepositoryImpl();
 
-    // UC1
     @Override
     public void addContact(Contact contact) {
         repository.addContact(contact);
     }
 
-    // UC2
     @Override
     public void addContactUsingAddressBook(Contact contact) {
         repository.addContactUsingAddressBook(contact);
+    }
+
+    @Override
+    public boolean editContactByName(String firstName, Contact updatedContact) {
+        return repository.editContactByName(firstName, updatedContact);
     }
 }

@@ -9,4 +9,7 @@ public interface AddressBookService {
 
     // UC2
     void addContactUsingAddressBook(Contact contact);
+
+    // UC3
+    boolean editContactByName(String firstName, Contact updatedContact);
 }

@@ -13,42 +13,81 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         AddressBookService service = new AddressBookServiceImpl();
 
-        System.out.print("Enter First Name: ");
+        // Add Contact (UC1 + UC2)
+        System.out.println("Add Contact");
+        System.out.print("First Name: ");
         String firstName = scanner.nextLine();
 
-        System.out.print("Enter Last Name: ");
+        System.out.print("Last Name: ");
         String lastName = scanner.nextLine();
 
-        System.out.print("Enter Address: ");
+        System.out.print("Address: ");
         String address = scanner.nextLine();
 
-        System.out.print("Enter City: ");
+        System.out.print("City: ");
         String city = scanner.nextLine();
 
-        System.out.print("Enter State: ");
+        System.out.print("State: ");
         String state = scanner.nextLine();
 
-        System.out.print("Enter Zip: ");
+        System.out.print("Zip: ");
         String zip = scanner.nextLine();
 
-        System.out.print("Enter Phone Number: ");
-        String phoneNumber = scanner.nextLine();
+        System.out.print("Phone: ");
+        String phone = scanner.nextLine();
 
-        System.out.print("Enter Email: ");
+        System.out.print("Email: ");
         String email = scanner.nextLine();
 
         Contact contact = new Contact(
                 firstName, lastName,
                 address, city, state,
-                zip, phoneNumber, email
+                zip, phone, email
         );
 
-        // UC1 call
         service.addContact(contact);
-
-        // UC2 call
         service.addContactUsingAddressBook(contact);
-        
-        scanner.close();
+
+        // UC3: Edit Contact
+        System.out.println("\nEdit Contact");
+        System.out.print("Enter First Name to Edit: ");
+        String editName = scanner.nextLine();
+
+        System.out.print("New Last Name: ");
+        String newLastName = scanner.nextLine();
+
+        System.out.print("New Address: ");
+        String newAddress = scanner.nextLine();
+
+        System.out.print("New City: ");
+        String newCity = scanner.nextLine();
+
+        System.out.print("New State: ");
+        String newState = scanner.nextLine();
+
+        System.out.print("New Zip: ");
+        String newZip = scanner.nextLine();
+
+        System.out.print("New Phone: ");
+        String newPhone = scanner.nextLine();
+
+        System.out.print("New Email: ");
+        String newEmail = scanner.nextLine();
+
+        Contact updatedContact = new Contact(
+                editName, newLastName,
+                newAddress, newCity,
+                newState, newZip,
+                newPhone, newEmail
+        );
+
+        boolean isUpdated =
+                service.editContactByName(editName, updatedContact);
+
+        if (isUpdated) {
+            System.out.println("Contact updated successfully (UC3).");
+        } else {
+            System.out.println("Contact not found.");
+        }
     }
 }

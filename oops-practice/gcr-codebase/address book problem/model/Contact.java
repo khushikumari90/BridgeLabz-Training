@@ -26,13 +26,44 @@ public class Contact {
         this.email = email;
     }
 
+    // Getters & Setters (needed for UC3)
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
-        return "Contact{" +
-                "Name='" + firstName + " " + lastName + '\'' +
-                ", City='" + city + '\'' +
-                ", Phone='" + phoneNumber + '\'' +
-                ", Email='" + email + '\'' +
-                '}';
+        return firstName + " " + lastName +
+                " | " + city +
+                " | " + phoneNumber +
+                " | " + email;
     }
 }

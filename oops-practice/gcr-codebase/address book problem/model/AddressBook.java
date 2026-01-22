@@ -15,6 +15,15 @@ public class AddressBook {
         contacts.add(contact);
     }
 
+    public Contact findContactByFirstName(String firstName) {
+        for (Contact contact : contacts) {
+            if (contact.getFirstName().equalsIgnoreCase(firstName)) {
+                return contact;
+            }
+        }
+        return null;
+    }
+
     public List<Contact> getContacts() {
         return contacts;
     }
