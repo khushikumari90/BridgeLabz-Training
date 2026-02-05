@@ -60,7 +60,7 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Object Modeling, Class Diagram
 - Inheritance
 - Encapsulation, Polymorphism, Interface and Abstract Class
-- Scenario-Based Excercises
+- Scenario-Based Exercises
 - Leetcode Problems
 
 ## Data Structure
@@ -68,6 +68,21 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Stack , Queue, HashMap and Hashing Function
 - Sorting Algorithms
 - Linear Search and Binary Search, StringBuilder, StringBuffer, BufferedReader, FileReader, InputStreamReader
+- Algorithm's Runtime Analysis & Big-O Notation
+- Scenario-Based Exercises
+
+## Collections & Streams
+- Generics
+- Collections
+- Exceptions
+- Streams
+- Regex & Junit
+- Annotations and Reflection
+- Scenario-Based Exercises
+
+## IO Programming
+- CSV Data Handling
+- JSON Data
   
 ## 📊 Progress Tracking
 
@@ -135,6 +150,41 @@ This repository serves as a comprehensive record of my learning journey, highlig
 
 - 16-Jan-2026 (Friday) : Learned Sorting Algorthims Bubble Sort,Selection Sort,Insertion Sort,Merge Sort,Quick Sort,Heap Sort,Counting Sort
 
+- 17-Jan-2026 (Saturday) : Completed the assigned practice set of Algorithm's Runtime Analysis & Big-O Notation
+
+- 18-Jan-2026 (Sunday) : Practiced Scenario Based Problems
+
+- 19-Jan-2026 (Monday) : Learned Java Generics
+
+- 20-Jan-2026 (Tuesday) : Completed the assigned practice set of Java Generics
+
+- 21-Jan-2026 (Wednesday) : Learned Collections and completed it's assigned practice set
+
+- 22-Jan-2026 (Thursday) : Learned Exceptions and Java Streams
+
+- 23-Jan-2026 (Friday) : Completed the assigned practice set of Exceptions
+
+- 24-Jan-2026 (Saturday) : Completed the assigned practice set of Streams
+
+- 26-Jan-2026 (Monday) : Practiced Scenario Based Problems
+
+- 27-Jan-2026 (Tuesday) : Learned Regex
+
+- 28-Jan-2026 (Wednesday) : Learned Junit and practiced scenario based problems
+
+- 29-Jan-2026 (Thursday) : Completed the assigned practice set of Regex and Junit
+
+- 30-Jan-2026 (Friday) : Learned Annotations and Reflection and Completed it's assigned practice set
+
+- 31-Jan-2026 (Saturday) : Learned CSV data handling
+
+- 1-Feb-2026 (Sunday) : Learned Json data
+
+- 2-Feb-2026 (Monday) : Completed the assigned practice set of CSV data handling and Json data
+
+- 3-Feb-2026 (Tuesday) : Learned Lambda expression and practiced scenario based
+
+- 4-Feb-2026 (Wednesday) : Completed assigned practice set of Lambda expressions.
 
 ## 🌟 Growth Journey
 This repository reflects my dedication, problem-solving skills, and consistent growth as a Java trainee at BridgeLabz.
