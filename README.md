@@ -79,10 +79,23 @@ The main goal is to provide a transparent record of my progress, demonstrating c
 - Regex & Junit
 - Annotations and Reflection
 - Scenario-Based Exercises
+- SonarQube
 
 ## IO Programming
 - CSV Data Handling
 - JSON Data
+
+## Java 8 & its features
+- Lambda Expressions
+- Functional Interfaces
+- Stream API
+- Collectors
+
+## Solution Designing
+- Design Patterns
+
+## Multithreading
+- Multithreading
   
 ## 📊 Progress Tracking
 
@@ -185,6 +198,10 @@ This repository serves as a comprehensive record of my learning journey, highlig
 - 3-Feb-2026 (Tuesday) : Learned Lambda expression and practiced scenario based
 
 - 4-Feb-2026 (Wednesday) : Completed assigned practice set of Lambda expressions.
+- 5-Feb-2026 (Thursday) : Learned Functional Interfaces
+- 6-Feb-2026 (Friday) : Completed the assigned practice set of Functional Interfaces
+- 7-Feb-2026 (Saturday) : Learned Stream API ,completed its assigned practice set and also learned collectors and completed its assigned practice set
+- 8-Feb-2026 (Sunday) : Learned Design Pattterns,Multithreading and SonarQube and completed their assigned practice set
 
 ## 🌟 Growth Journey
 This repository reflects my dedication, problem-solving skills, and consistent growth as a Java trainee at BridgeLabz.
