@@ -201,7 +201,9 @@ This repository serves as a comprehensive record of my learning journey, highlig
 - 5-Feb-2026 (Thursday) : Learned Functional Interfaces
 - 6-Feb-2026 (Friday) : Completed the assigned practice set of Functional Interfaces
 - 7-Feb-2026 (Saturday) : Learned Stream API ,completed its assigned practice set and also learned collectors and completed its assigned practice set
-- 8-Feb-2026 (Sunday) : Learned Design Pattterns,Multithreading and SonarQube and completed their assigned practice set
+- 8-Feb-2026 (Sunday) : Learned Design Pattterns,Multithreading and completed their assigned practice set
+- 9-Feb-2026 (Monday) : Learned and completed the SonarQube assigned practice set.
+- 11-Feb-2026 (Wednesday) : Learned JDBC and completed scenario based problem of JUNIT.
 
 ## 🌟 Growth Journey
 This repository reflects my dedication, problem-solving skills, and consistent growth as a Java trainee at BridgeLabz.
