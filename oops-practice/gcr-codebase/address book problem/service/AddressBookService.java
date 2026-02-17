@@ -1,24 +1,44 @@
-package service;
+package com.example.AddressBookProblem.service;
 
-import model.AddressBook;
-import model.Contact;
+import com.example.AddressBookProblem.model.Contact;
+import com.example.AddressBookProblem.repository.*;
 
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
-// Service layer for business logic
-public interface AddressBookService {
+public class AddressBookService {
 
-    // UC6
-    void createAddressBook(String name);
+    private AddressBookRepository repo = new AddressBookRepository();
+    private FileRepository fileRepo = new FileRepository();
+    private CsvRepository csvRepo = new CsvRepository();
+    private DatabaseRepository dbRepo = new DatabaseRepository();
 
-    Map<String, AddressBook> getAllAddressBooks();
+    // UC 1,4,6
+    public void addContact(Contact c) {
+        repo.add(c);
+    }
 
-    // UC2 / UC5
-    void addContact(String bookName, Contact contact);
+    // UC 10 – Sort by name
+    public void sortByName() {
+        repo.getAll().sort(Comparator.comparing(Contact::getFirstName));
+    }
 
-    // UC3
-    boolean editContact(String bookName, String firstName, Contact updated);
+    // UC 8,9 – View & Count by City
+    public Map<String, Long> countByCity() {
+        return repo.getAll().stream()
+                .collect(Collectors.groupingBy(Contact::getCity, Collectors.counting()));
+    }
 
-    // UC4
-    boolean deleteContact(String bookName, String firstName);
+    // UC 17 – Multithreading IO
+    public void saveAllAsync() {
+        ExecutorService es = Executors.newFixedThreadPool(3);
+
+        es.execute(() -> fileRepo.writeToFile(repo.getAll()));
+        es.execute(() -> csvRepo.writeCSV(repo.getAll()));
+        es.execute(() -> repo.getAll().forEach(dbRepo::save));
+
+        es.shutdown();
+    }
 }

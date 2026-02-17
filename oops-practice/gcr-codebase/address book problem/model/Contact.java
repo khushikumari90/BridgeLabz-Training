@@ -1,6 +1,8 @@
-package model;
+package com.example.AddressBookProblem.model;
 
-// UC1: Ability to create a Contact with all personal details
+import java.util.Objects;
+import java.util.regex.Pattern;
+
 public class Contact {
 
     private String firstName;
@@ -9,14 +11,15 @@ public class Contact {
     private String city;
     private String state;
     private String zip;
-    private String phoneNumber;
+    private String phone;
     private String email;
 
-    // UC1: Create contact using constructor
-    public Contact(String firstName, String lastName,
-                   String address, String city,
-                   String state, String zip,
-                   String phoneNumber, String email) {
+    // UC 1 – Create Contact
+    public Contact(String firstName, String lastName, String address,
+                   String city, String state, String zip,
+                   String phone, String email) {
+
+        validate(phone, email);
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,30 +27,47 @@ public class Contact {
         this.city = city;
         this.state = state;
         this.zip = zip;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
         this.email = email;
     }
 
-    public String getFirstName() {
-        return firstName;
+    // UC 7 – Regex Validation
+    private void validate(String phone, String email) {
+        if (!Pattern.matches("\\d{10}", phone))
+            throw new IllegalArgumentException("Invalid Phone Number");
+
+        if (!Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email))
+            throw new IllegalArgumentException("Invalid Email");
     }
 
-    // UC3: Update existing contact details
-    public void update(Contact updated) {
-        this.lastName = updated.lastName;
-        this.address = updated.address;
-        this.city = updated.city;
-        this.state = updated.state;
-        this.zip = updated.zip;
-        this.phoneNumber = updated.phoneNumber;
-        this.email = updated.email;
+    // UC 7 – Override equals for duplicate check
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Contact)) return false;
+        Contact contact = (Contact) o;
+        return firstName.equalsIgnoreCase(contact.firstName)
+                && lastName.equalsIgnoreCase(contact.lastName);
     }
 
     @Override
-    public String toString() {
-        return firstName + " " + lastName +
-                " | " + city +
-                " | " + phoneNumber +
-                " | " + email;
+    public int hashCode() {
+        return Objects.hash(firstName.toLowerCase(), lastName.toLowerCase());
     }
+
+    // UC 10 – toString override
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + ", " + city + ", " + state + ", " + zip;
+    }
+
+    // Getters
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getAddress() { return address; }
+    public String getCity() { return city; }
+    public String getState() { return state; }
+    public String getZip() { return zip; }
+    public String getPhone() { return phone; }
+    public String getEmail() { return email; }
 }

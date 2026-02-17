@@ -1,40 +1,17 @@
-package controller;
+package com.example.AddressBookProblem.controller;
 
-import model.AddressBook;
-import model.Contact;
-import service.AddressBookService;
-import service.AddressBookServiceImpl;
+import com.example.AddressBookProblem.model.Contact;
+import com.example.AddressBookProblem.service.AddressBookService;
 
-import java.util.Map;
-
-// Controller layer: connects Main with Service
 public class AddressBookController {
 
-    private final AddressBookService service =
-            new AddressBookServiceImpl();
+    private AddressBookService service = new AddressBookService();
 
-    // UC6: Create Address Book
-    public void createAddressBook(String name) {
-        service.createAddressBook(name);
+    public void add(Contact c) {
+        service.addContact(c);
     }
 
-    // UC6: Get all Address Books
-    public Map<String, AddressBook> getAllAddressBooks() {
-        return service.getAllAddressBooks();
-    }
-
-    // UC1, UC2, UC5: Add contact
-    public void addContact(String bookName, Contact contact) {
-        service.addContact(bookName, contact);
-    }
-
-    // UC3: Edit contact
-    public boolean editContact(String bookName, String firstName, Contact updated) {
-        return service.editContact(bookName, firstName, updated);
-    }
-
-    // UC4: Delete contact
-    public boolean deleteContact(String bookName, String firstName) {
-        return service.deleteContact(bookName, firstName);
+    public void saveAll() {
+        service.saveAllAsync();
     }
 }

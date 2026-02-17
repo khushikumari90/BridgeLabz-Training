@@ -1,28 +1,32 @@
-package repository;
+package com.example.AddressBookProblem.repository;
 
-import model.AddressBook;
-import model.Contact;
+import com.example.AddressBookProblem.model.Contact;
+import java.util.*;
 
-import java.util.Map;
+public class AddressBookRepository {
 
-// Repository layer for data handling
-public interface AddressBookRepository {
+    // UC 4 – Collection to store contacts
+    private List<Contact> contacts = new ArrayList<>();
 
-    // UC6: Create Address Book with unique name
-    void createAddressBook(String name);
+    // UC 6 – Add Contact with duplicate check
+    public void add(Contact contact) {
+        if (contacts.contains(contact))
+            throw new RuntimeException("Duplicate Contact Found");
+        contacts.add(contact);
+    }
 
-    // UC6: Get Address Book by name
-    AddressBook getAddressBook(String name);
+    // UC 2 – Edit Contact
+    public void edit(String firstName, Contact newContact) {
+        delete(firstName);
+        add(newContact);
+    }
 
-    // UC6: Dictionary of Address Books
-    Map<String, AddressBook> getAllAddressBooks();
+    // UC 3 – Delete Contact
+    public void delete(String firstName) {
+        contacts.removeIf(c -> c.getFirstName().equalsIgnoreCase(firstName));
+    }
 
-    // UC2 / UC5: Add contact to Address Book
-    void addContact(String bookName, Contact contact);
-
-    // UC3: Edit contact
-    boolean editContact(String bookName, String firstName, Contact updated);
-
-    // UC4: Delete contact
-    boolean deleteContact(String bookName, String firstName);
+    public List<Contact> getAll() {
+        return contacts;
+    }
 }
