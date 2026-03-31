@@ -15,6 +15,11 @@ class WarningExample {
         for (Object obj : list) {
             System.out.println(obj);
         }
+
+
+
+
+
     }
 }
 
