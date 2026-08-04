@@ -69,3 +69,44 @@
 * Created and verified a covering index using `EXPLAIN`
 * Created ER Diagram for the Health Clinic database
 
+## Day 3 - SQL Joins, Stored Procedures & Triggers
+
+### Topics Covered
+
+#### SQL Joins
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+- SELF JOIN
+- CROSS JOIN
+- Multiple Table JOIN
+
+#### Stored Procedures
+- Why Stored Procedures
+- Creating Procedures
+- Calling Procedures
+- IN Parameter
+- OUT Parameter
+- INOUT Parameter
+- Error Handling
+
+#### Triggers
+- BEFORE INSERT
+- AFTER INSERT
+- BEFORE UPDATE
+- AFTER UPDATE
+- BEFORE DELETE
+- AFTER DELETE
+
+### Practical Tasks
+
+- Performed different types of SQL JOINs
+- Created and called Stored Procedures
+- Practiced IN, OUT and INOUT parameters
+- Implemented Error Handling
+- Created BEFORE and AFTER Triggers
+- Used NEW and OLD values in Triggers
+- Implemented validation and audit logging
+- Worked with the Health Clinic database schema
+
