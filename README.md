@@ -110,3 +110,65 @@
 - Implemented validation and audit logging
 - Worked with the Health Clinic database schema
 
+## Day 4 - JDBC, Layered Architecture & Transaction Management
+
+### Topics Covered
+
+**JDBC Fundamentals**
+* JDBC Architecture & Drivers
+* Connection URL, DriverManager
+* Statement vs PreparedStatement
+* ResultSet Handling
+* PreparedStatement & SQL Injection Prevention
+* Try-with-Resources
+
+**Design Patterns**
+* DTO (Data Transfer Object) Pattern
+* DAO (Data Access Object) Pattern
+* Interface vs Implementation separation
+* Layered Architecture (UI → Service → DAO → DTO → Database)
+
+**Transaction Management**
+* ACID Properties (Atomicity, Consistency, Isolation, Durability)
+* Auto-commit vs Manual commit
+* COMMIT and ROLLBACK in Java
+* Multi-step transactions across multiple tables
+* Connection Pooling with HikariCP
+
+**Application Development**
+* Console-based UI design
+* Maven project structure & dependency management
+* Building a runnable JAR (Maven Shade Plugin)
+
+### Practical Tasks
+
+* Designed and built **HealthClinicApp** — a full console-based Health Clinic Management System
+* Implemented layered architecture: `UI (ConsoleMenu)` → `Service (AppointmentService)` → `DAO` → `DTO` → `MySQL`
+* Created 6 DTOs: `Patient`, `Doctor`, `Specialization`, `Appointment`, `Billing`, `VisitHistory`
+* Built full CRUD DAOs (interface + implementation) for all 6 entities
+* Implemented `HikariConnectionPool` for connection pooling instead of opening a new connection per query
+* Built `AppointmentService.completeAppointment()` — a transactional method that:
+  * Updates appointment status to `Completed`
+  * Inserts a `billing` record
+  * Inserts a `visit_history` record
+  * Commits all three writes together, or rolls back all three on failure
+* Verified transaction safety by intentionally passing an invalid appointment ID and confirming no partial data was saved
+* Built a full console menu (`ConsoleMenu`) covering registration, booking, completion, cancellation, rescheduling, and viewing for every entity
+* Added input validation for bad input, duplicate emails, and invalid dates
+* Packaged the project using Maven (`pom.xml`) with MySQL Connector/J and HikariCP dependencies
+* Verified end-to-end data flow: Console input → Service → DAO → MySQL → back to Console output
+
+### Project Structure
+
+```
+HealthClinicApp/
+├── pom.xml
+├── database/health_clinic_schema.sql
+└── src/main/java/com/clinic/
+    ├── Main.java
+    ├── dto/         (Patient, Doctor, Specialization, Appointment, Billing, VisitHistory)
+    ├── config/      (HikariConnectionPool)
+    ├── dao/         (6 DAO interfaces + 6 implementations)
+    ├── service/     (AppointmentService)
+    └── ui/          (ConsoleMenu)
+```
