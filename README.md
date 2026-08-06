@@ -172,3 +172,52 @@ HealthClinicApp/
     ├── service/     (AppointmentService)
     └── ui/          (ConsoleMenu)
 ```
+
+# Day 5 - Servlets & Spring MVC Architecture
+
+## Topics Covered
+
+### Servlet Fundamentals
+- What is a Servlet
+- Servlet Life Cycle (init, service, destroy)
+- Servlet Container (Tomcat)
+- web.xml Configuration
+- doGet() vs doPost()
+- Request and Response Objects
+
+### Introduction to Spring MVC
+- Why Spring MVC over plain Servlets
+- Front Controller Pattern
+- DispatcherServlet
+- Spring MVC Request Flow
+
+### MVC Architecture
+- Model
+- View
+- Controller
+- Separation of Concerns
+
+### Spring MVC Configuration
+- Component Scanning (@Controller)
+- InternalResourceViewResolver
+- Mapping Views with JSP
+- @GetMapping and @PostMapping
+- @RequestParam
+- Model and ModelAttribute
+
+### Building & Deployment
+- Maven WAR Packaging
+- Deploying WAR on Apache Tomcat
+- Running Spring MVC App via IntelliJ (Smart Tomcat Plugin)
+
+## Practical Tasks
+
+- Built a Greeting Application using Spring MVC following MVC architecture
+- Created GreetingController with one GET method (`/greeting`) to display the form
+- Created one POST method (`/greeting`) to process form input and return a greeting message
+- Configured DispatcherServlet in web.xml as the front controller
+- Set up greeting-servlet.xml with component-scan and InternalResourceViewResolver
+- Built GreetingModel as the Model layer
+- Created greeting.jsp as the View layer using JSTL
+- Verified GET request renders the form on first page load
+- Verified POST request correctly binds
