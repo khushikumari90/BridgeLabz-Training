@@ -221,3 +221,54 @@ HealthClinicApp/
 - Created greeting.jsp as the View layer using JSTL
 - Verified GET request renders the form on first page load
 - Verified POST request correctly binds
+
+## Day 6 - CRUD Operations with Spring MVC & JDBC
+
+### Topics Covered
+
+#### CRUD Fundamentals
+- Create, Read, Update, Delete operations
+- Mapping CRUD operations to HTTP methods
+- RESTful-style URL design (`/greetings`, `/greetings/add`, `/greetings/edit/{id}`, `/greetings/delete/{id}`)
+
+#### JDBC Integration in Spring MVC
+- DriverManager-based Connection utility
+- PreparedStatement for parameterized queries
+- ResultSet handling for multi-row and single-row queries
+- Try-with-Resources for automatic connection closing
+
+#### DAO Pattern in Spring MVC
+- DAO interface and implementation separation
+- @Repository annotation
+- @Autowired dependency injection into Controller
+- Component scanning across multiple packages (controller, dao)
+
+#### Spring MVC Path Variables & Redirects
+- @PathVariable for dynamic URLs
+- @ModelAttribute for form binding
+- redirect: prefix for post-action navigation (Post-Redirect-Get pattern)
+
+#### Database Setup
+- Creating MySQL database and table via schema script
+- JDBC URL, username, and password configuration
+
+#### Debugging & Tooling
+- Running Spring MVC apps via IntelliJ Community Edition using Smart Tomcat plugin
+- Resolving `NoSuchBeanDefinitionException` caused by incomplete component-scan
+- Resolving `No suitable driver found` error caused by missing dependency reload
+- Reading and interpreting Tomcat console logs and stack traces
+
+### Practical Tasks
+
+- Extended the Greeting Application to support full CRUD operations
+- Created Greeting entity with id, name, and message fields
+- Built GreetingDao interface and GreetingDaoImpl using plain JDBC
+- Implemented addGreeting(), getAllGreetings(), getGreetingById(), updateGreeting(), and deleteGreeting() methods
+- Created DBConnection utility class using DriverManager
+- Built GreetingCrudController with endpoints for list, add, edit, and delete
+- Created greetings-list.jsp to display all records in a table with Edit and Delete links
+- Created a shared greetings-form.jsp used for both Add and Edit operations
+- Fixed a Spring bean creation failure by updating component-scan to cover the dao package
+- Fixed a JDBC driver error by adding mysql-connector-java dependency and reloading Maven
+- Ran and tested the CRUD application end-to-end on Apache Tomcat via IntelliJ (Smart Tomcat plugin)
+- Verified Add, Edit, and Delete operations reflect correctly in the MySQL database
