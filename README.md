@@ -273,7 +273,7 @@ HealthClinicApp/
 - Ran and tested the CRUD application end-to-end on Apache Tomcat via IntelliJ (Smart Tomcat plugin)
 - Verified Add, Edit, and Delete operations reflect correctly in the MySQL database
 
-### Day 7 - Spring Boot REST API & Contact Management
+## Day 7 - Spring Boot REST API & Contact Management
 
 ## Topics Covered
 
