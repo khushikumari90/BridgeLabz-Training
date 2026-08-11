@@ -272,3 +272,35 @@ HealthClinicApp/
 - Fixed a JDBC driver error by adding mysql-connector-java dependency and reloading Maven
 - Ran and tested the CRUD application end-to-end on Apache Tomcat via IntelliJ (Smart Tomcat plugin)
 - Verified Add, Edit, and Delete operations reflect correctly in the MySQL database
+
+### Day 7 - Spring Boot REST API & Contact Management
+
+## Topics Covered
+
+* Spring Boot Fundamentals
+* REST API & HTTP Methods
+* `@RestController`, `@GetMapping`, `@PostMapping`, `@PatchMapping`, `@DeleteMapping`
+* Spring Data JPA & Hibernate
+* Entity, Repository, Service & Controller
+* DTO Pattern
+* MySQL Integration
+* Lombok
+* CRUD Operations
+* API Testing with Postman
+
+## Practical Tasks
+
+* Built a **Contact Management REST API** using Spring Boot.
+* Connected the application with **MySQL** using Spring Data JPA.
+* Created `Contact` entity with validation and unique constraints.
+* Implemented `ContactRepository` using `JpaRepository`.
+* Created Service and Controller layers following layered architecture.
+* Implemented CRUD APIs:
+
+  * `GET /contacts` – Get all contacts
+  * `GET /contact/{id}` – Get contact by ID
+  * `POST /contact` – Add contact
+  * `PATCH /contact/{id}` – Update contact
+  * `DELETE /contact/{id}` – Delete contact
+* Used DTOs for request and response handling.
+* Tested REST APIs using Postman.
