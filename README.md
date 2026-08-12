@@ -304,3 +304,24 @@ HealthClinicApp/
   * `DELETE /contact/{id}` – Delete contact
 * Used DTOs for request and response handling.
 * Tested REST APIs using Postman.
+
+# Day 8 - MySQL Database & SQL Queries
+
+## Topics Covered
+
+* Database & Table Creation
+* `CREATE DATABASE` and `USE`
+* `CREATE TABLE`
+* Primary Key & Auto Increment
+* `UNIQUE` and `NOT NULL` Constraints
+* `INSERT` Data
+* `SELECT` Queries
+* `ALTER TABLE`
+* `UPDATE` Queries
+* Aggregate Functions (`MAX`, `AVG`)
+* `GROUP BY`
+* Subqueries
+* Correlated Subqueries
+* SQL Safe Updates
+* `DESC` Command
+
