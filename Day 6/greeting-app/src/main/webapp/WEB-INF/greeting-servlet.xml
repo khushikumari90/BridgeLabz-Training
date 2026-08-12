@@ -11,7 +11,7 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- Controller package scan -->
+    <!-- scan controller and dao packages -->
     <context:component-scan base-package="com.example.greeting" />
 
     <mvc:annotation-driven />

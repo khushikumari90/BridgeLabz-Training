@@ -5,11 +5,7 @@ import com.example.greeting.model.Greeting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/greetings")
@@ -18,45 +14,45 @@ public class GreetingCrudController {
     @Autowired
     private GreetingDao greetingDao;
 
-    // READ - list all greetings
+    // show all greetings
     @GetMapping
-    public String listGreetings(Model model) {
+    public String list(Model model) {
         model.addAttribute("greetings", greetingDao.getAllGreetings());
         return "greetings-list";
     }
 
-    // CREATE - show add form
+    // show add form
     @GetMapping("/add")
-    public String showAddForm(Model model) {
+    public String addForm(Model model) {
         model.addAttribute("greeting", new Greeting());
         return "greetings-form";
     }
 
-    // CREATE - save new greeting
+    // save new greeting
     @PostMapping("/add")
-    public String addGreeting(@ModelAttribute Greeting greeting) {
+    public String add(@ModelAttribute Greeting greeting) {
         greetingDao.addGreeting(greeting);
         return "redirect:/greetings";
     }
 
-    // UPDATE - show edit form
+    // show edit form
     @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable("id") int id, Model model) {
+    public String editForm(@PathVariable int id, Model model) {
         model.addAttribute("greeting", greetingDao.getGreetingById(id));
         return "greetings-form";
     }
 
-    // UPDATE - save changes
+    // update existing greeting
     @PostMapping("/edit/{id}")
-    public String updateGreeting(@PathVariable("id") int id, @ModelAttribute Greeting greeting) {
+    public String update(@PathVariable int id, @ModelAttribute Greeting greeting) {
         greeting.setId(id);
         greetingDao.updateGreeting(greeting);
         return "redirect:/greetings";
     }
 
-    // DELETE
+    // delete greeting
     @GetMapping("/delete/{id}")
-    public String deleteGreeting(@PathVariable("id") int id) {
+    public String delete(@PathVariable int id) {
         greetingDao.deleteGreeting(id);
         return "redirect:/greetings";
     }

@@ -9,11 +9,6 @@ public class Greeting {
     public Greeting() {
     }
 
-    public Greeting(String name, String message) {
-        this.name = name;
-        this.message = message;
-    }
-
     public Greeting(int id, String name, String message) {
         this.id = id;
         this.name = name;
