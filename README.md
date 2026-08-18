@@ -1,327 +1,214 @@
-# Refresher Training
+# Welcome to the Daily Updates of Refresher Training 🚀
 
-## Day 1 - DBMS Fundamentals & RDBMS Basics
+---
 
-### Topics Covered
+## Day 1 — DBMS Fundamentals & RDBMS Basics
 
-- What is Data
-- Database
-- DBMS (Database Management System)
-- File System vs DBMS
-- Advantages of DBMS
-- Types of DBMS
-- RDBMS (Relational Database Management System)
-- Features of RDBMS
-- Relational Database vs Non-Relational Database
-- SQL vs NoSQL
-- When to Use SQL
-- When to Use NoSQL
-- Introduction to MySQL
-- MySQL Architecture
-- Installing MySQL
-- Creating a Database
-- Creating Tables
-- DDL Commands (CREATE, ALTER, DROP, TRUNCATE, RENAME)
-- DML Commands (INSERT, UPDATE, DELETE)
-- TCL Commands (COMMIT, ROLLBACK, SAVEPOINT)
-- DCL Commands (GRANT, REVOKE)
+### 📌 Done on (31-07-2026)
 
-### Practical Tasks
+- Understood the hierarchy: **Data → Database → DBMS → RDBMS**
+- Compared File System vs DBMS and explored the advantages of DBMS.
+- Learned different DBMS models and SQL vs NoSQL.
+- Installed MySQL and studied its internal architecture.
+- Practiced DDL, DML, TCL, and DCL commands.
+- Designed the initial Health Clinic database with **Patients** and **Doctors** tables.
+- Solved all practice and interview questions.
 
-- Installed and verified MySQL using `SELECT VERSION();`
-- Created the `health_clinic_db` database
-- Created `specializations` and `appointments` tables
-- Inserted sample records into both tables
-- Performed `ALTER TABLE` (ADD and DROP COLUMN)
-- Executed `UPDATE` and `DELETE` queries with `WHERE` clause
-- Verified changes using `SELECT` statements
-- Created a new MySQL user (`clinic_app_user`)
-- Granted `SELECT`, `INSERT`, `UPDATE`, and `DELETE` privileges on `health_clinic_db`
+### ✅ Assignment
 
-## Day 2 - Database Design, Relationships & Indexing
+[Day 1 Assignment](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-1/assignment)
 
-### Topics Covered
+---
 
-* ER Diagram
-* Database Relationships
-* One-to-One (1:1)
-* One-to-Many (1:M)
-* Many-to-Many (M:M)
-* Primary Key & Foreign Key
-* Relationship Tables
-* Database Normalization
-* 1NF, 2NF & 3NF
-* Indexing
-* Single-Column Index
-* Composite Index
-* Covering Index
-* EXPLAIN Query
-* Query Optimization
+## Day 2 — ER Diagram, Indexing & Database Normalization
 
-### Practical Tasks
+### 📌 Done on (03-08-2026)
 
-* Extended `health_clinic_db` schema
-* Created `rooms` table
-* Created `doctor_room` relationship table
-* Created and tested single-column and composite indexes
-* Used `EXPLAIN` to analyze query performance
-* Verified `patient_phones` design for 1NF, 2NF and 3NF
-* Created and verified a covering index using `EXPLAIN`
-* Created ER Diagram for the Health Clinic database
+- Designed a complete ER Diagram for the Health Clinic application.
+- Learned Indexing (Clustered, Non-Clustered, Composite, Covering, Unique) and analyzed queries using `EXPLAIN`.
+- Mastered Normalization (1NF → BCNF) and understood Denormalization.
+- Built the fully normalized Health Clinic database schema with proper indexes.
+- Solved all practice and interview questions.
 
-## Day 3 - SQL Joins, Stored Procedures & Triggers
+### ✅ Assignment
 
-### Topics Covered
+[Day 2 Assignment](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-2/assignment)
 
-#### SQL Joins
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
-- FULL OUTER JOIN
-- SELF JOIN
-- CROSS JOIN
-- Multiple Table JOIN
+---
 
-#### Stored Procedures
-- Why Stored Procedures
-- Creating Procedures
-- Calling Procedures
-- IN Parameter
-- OUT Parameter
-- INOUT Parameter
-- Error Handling
+## Day 3 — SQL Joins, Stored Procedures & Triggers
 
-#### Triggers
-- BEFORE INSERT
-- AFTER INSERT
-- BEFORE UPDATE
-- AFTER UPDATE
-- BEFORE DELETE
-- AFTER DELETE
+### 📌 Done on (04-08-2026)
 
-### Practical Tasks
+- Practiced all major SQL JOINs and complex multi-table queries.
+- Learned Stored Procedures with parameters, transactions, and error handling.
+- Implemented BEFORE/AFTER Triggers using `NEW` and `OLD`.
+- Built procedures and triggers for the Health Clinic project.
+- Solved all practice and interview questions.
 
-- Performed different types of SQL JOINs
-- Created and called Stored Procedures
-- Practiced IN, OUT and INOUT parameters
-- Implemented Error Handling
-- Created BEFORE and AFTER Triggers
-- Used NEW and OLD values in Triggers
-- Implemented validation and audit logging
-- Worked with the Health Clinic database schema
+---
 
-## Day 4 - JDBC, Layered Architecture & Transaction Management
+## Day 4 — JDBC, Transactions & Health Clinic Console Application
 
-### Topics Covered
+### 📌 Done on (05-08-2026)
 
-**JDBC Fundamentals**
-* JDBC Architecture & Drivers
-* Connection URL, DriverManager
-* Statement vs PreparedStatement
-* ResultSet Handling
-* PreparedStatement & SQL Injection Prevention
-* Try-with-Resources
+- Connected Java with MySQL using JDBC.
+- Learned DriverManager, PreparedStatement, ResultSet, and Exception Handling.
+- Understood SQL Injection prevention using PreparedStatement.
+- Implemented Transaction Management (`commit`, `rollback`, `savepoint`).
+- Learned HikariCP Connection Pooling and compared it with DriverManager.
+- Built a layered Java application using **DTO → DAO → Service → UI** architecture.
+- Implemented CRUD operations for **Patients, Doctors, Appointments, Billing, and Visit History**.
+- Completed the **Health Clinic Console Application** using Java, JDBC, Maven, and MySQL.
 
-**Design Patterns**
-* DTO (Data Transfer Object) Pattern
-* DAO (Data Access Object) Pattern
-* Interface vs Implementation separation
-* Layered Architecture (UI → Service → DAO → DTO → Database)
+### 🚀 Project
 
-**Transaction Management**
-* ACID Properties (Atomicity, Consistency, Isolation, Durability)
-* Auto-commit vs Manual commit
-* COMMIT and ROLLBACK in Java
-* Multi-step transactions across multiple tables
-* Connection Pooling with HikariCP
+[Health Clinic Console Application](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-4/HealthClinicApp)
 
-**Application Development**
-* Console-based UI design
-* Maven project structure & dependency management
-* Building a runnable JAR (Maven Shade Plugin)
+## Day 5 — Tomcat, Servlets & Spring Introduction
 
-### Practical Tasks
+### 📌 Done on (06-08-2026)
 
-* Designed and built **HealthClinicApp** — a full console-based Health Clinic Management System
-* Implemented layered architecture: `UI (ConsoleMenu)` → `Service (AppointmentService)` → `DAO` → `DTO` → `MySQL`
-* Created 6 DTOs: `Patient`, `Doctor`, `Specialization`, `Appointment`, `Billing`, `VisitHistory`
-* Built full CRUD DAOs (interface + implementation) for all 6 entities
-* Implemented `HikariConnectionPool` for connection pooling instead of opening a new connection per query
-* Built `AppointmentService.completeAppointment()` — a transactional method that:
-  * Updates appointment status to `Completed`
-  * Inserts a `billing` record
-  * Inserts a `visit_history` record
-  * Commits all three writes together, or rolls back all three on failure
-* Verified transaction safety by intentionally passing an invalid appointment ID and confirming no partial data was saved
-* Built a full console menu (`ConsoleMenu`) covering registration, booking, completion, cancellation, rescheduling, and viewing for every entity
-* Added input validation for bad input, duplicate emails, and invalid dates
-* Packaged the project using Maven (`pom.xml`) with MySQL Connector/J and HikariCP dependencies
-* Verified end-to-end data flow: Console input → Service → DAO → MySQL → back to Console output
+- Learned the role of **Apache Tomcat** as a Web/Servlet Container and how it executes Servlets.
+- Understood the **Servlet Lifecycle** and the complete Browser → Tomcat → Servlet → Browser request-response flow.
+- Configured **Apache Tomcat** with IntelliJ IDEA using Smart Tomcat.
+- Built and successfully deployed the **First Servlet Application**.
+- Learned URL mapping using `@WebServlet` and request handling through `doGet()`.
+- Explored the basics of the **Spring Framework** and why it is used.
+- Learned the core concepts of **Inversion of Control (IoC)** and **Dependency Injection (DI)**.
+- Related Spring's dependency injection to manual object creation (`new`) used in previous Java console applications.
+- Deployed basic servlet on tomcat
+- Explore Spring's IoC container with a simple bean example
 
-### Project Structure
+### 📂 Practice Projects:
 
-```
-HealthClinicApp/
-├── pom.xml
-├── database/health_clinic_schema.sql
-└── src/main/java/com/clinic/
-    ├── Main.java
-    ├── dto/         (Patient, Doctor, Specialization, Appointment, Billing, VisitHistory)
-    ├── config/      (HikariConnectionPool)
-    ├── dao/         (6 DAO interfaces + 6 implementations)
-    ├── service/     (AppointmentService)
-    └── ui/          (ConsoleMenu)
-```
+- [HelloWorldDemo](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-5/HelloWorldDemo) — Built a basic Spring Boot application and practiced Spring MVC/REST request handling.
+- [SpringConcepts](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-5/Springconcepts) — Practiced Spring IoC, `ApplicationContext`, Dependency Injection, Spring annotations, and logging.
+- [GreetingsApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-5/GreetingsApp) — Built a Spring Boot application using REST, JPA, H2, CRUD operations, validation, and custom JPA queries.
+- [FirstSpringApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-5/firstspringapp) - Created a *basic Spring Boot application* and learned the fundamentals of Spring Boot application setup and execution.
 
-# Day 5 - Servlets & Spring MVC Architecture
+### 📂 Assigned Project:
 
-## Topics Covered
+- [First Servlet App](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-5/FirstServletProject)
 
-### Servlet Fundamentals
-- What is a Servlet
-- Servlet Life Cycle (init, service, destroy)
-- Servlet Container (Tomcat)
-- web.xml Configuration
-- doGet() vs doPost()
-- Request and Response Objects
+- Click above and check the code in "src/main" folder.  
 
-### Introduction to Spring MVC
-- Why Spring MVC over plain Servlets
-- Front Controller Pattern
-- DispatcherServlet
-- Spring MVC Request Flow
+## Day 6 — Spring MVC
 
-### MVC Architecture
-- Model
-- View
-- Controller
-- Separation of Concerns
+### 📌 Done from (07-08-2026 to 09-08-2026)
 
-### Spring MVC Configuration
-- Component Scanning (@Controller)
-- InternalResourceViewResolver
-- Mapping Views with JSP
-- @GetMapping and @PostMapping
-- @RequestParam
-- Model and ModelAttribute
+- Understood **Spring MVC architecture** and the role of `DispatcherServlet`.
+- Learned how **Controllers and Views** work in Spring MVC.
+- Learned request mapping and request handling using `@Controller`, `@RequestMapping`, `@GetMapping`, and `@PostMapping`.
+- Understood how `DispatcherServlet` acts as the single entry point for HTTP requests.
+- Built the required **My Greetings App** using Spring MVC.
+- Learned how Spring MVC connects the **Controller → Service → DAO** layers.
+- Migrated the existing **HealthClinicApp** from `ConsoleMenu` to Spring MVC Controllers while keeping the existing Service and DAO layers.
+- Tested HTTP requests and responses through Spring MVC endpoints.
+- Build My Greetings App using Spring MVC
 
-### Building & Deployment
-- Maven WAR Packaging
-- Deploying WAR on Apache Tomcat
-- Running Spring MVC App via IntelliJ (Smart Tomcat Plugin)
+### 📂 Assigned Project:
 
-## Practical Tasks
+- [My Greetings App](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-6/MyGreetingsApp)
 
-- Built a Greeting Application using Spring MVC following MVC architecture
-- Created GreetingController with one GET method (`/greeting`) to display the form
-- Created one POST method (`/greeting`) to process form input and return a greeting message
-- Configured DispatcherServlet in web.xml as the front controller
-- Set up greeting-servlet.xml with component-scan and InternalResourceViewResolver
-- Built GreetingModel as the Model layer
-- Created greeting.jsp as the View layer using JSTL
-- Verified GET request renders the form on first page load
-- Verified POST request correctly binds
+### 📂 Migrated Project:
 
-## Day 6 - CRUD Operations with Spring MVC & JDBC
+-[HealthClinic](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-6/HealthClinicApp)
 
-### Topics Covered
+## Day 7 — Spring REST API & Request Handling
+### 📌 Done on (10-08-2026)
 
-#### CRUD Fundamentals
-- Create, Read, Update, Delete operations
-- Mapping CRUD operations to HTTP methods
-- RESTful-style URL design (`/greetings`, `/greetings/add`, `/greetings/edit/{id}`, `/greetings/delete/{id}`)
+-  Learned proper REST conventions — resource-based URLs, with HTTP methods carrying the action.
+- Used ResponseEntity for explicit control over HTTP status codes such as 200, 201, 204, and 404.
+- Learned Bean Validation with @NotBlank, @Email, @Pattern, and @Valid to reject bad input before business
+logic.
+- Centralized error handling with @ControllerAdvice and @ExceptionHandler instead of repeating try/catch logic in
+every Controller.
+- Set up H2 in-memory database for zero-install, fast-iteration development and understood its trade-off compared
+with MySQL.
+- Got a conceptual grounding in Distributed Architectures — why systems split into services and what complexity
+that introduces.
+- Started the Contacts App with working, validated, properly status-coded REST endpoints.
 
-#### JDBC Integration in Spring MVC
-- DriverManager-based Connection utility
-- PreparedStatement for parameterized queries
-- ResultSet handling for multi-row and single-row queries
-- Try-with-Resources for automatic connection closing
+### 📂 Project:
+- [ContactsApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-7/ContactsApp)
 
-#### DAO Pattern in Spring MVC
-- DAO interface and implementation separation
-- @Repository annotation
-- @Autowired dependency injection into Controller
-- Component scanning across multiple packages (controller, dao)
+## Day 8 - API Testing Tools & SDLC Exposure
 
-#### Spring MVC Path Variables & Redirects
-- @PathVariable for dynamic URLs
-- @ModelAttribute for form binding
-- redirect: prefix for post-action navigation (Post-Redirect-Get pattern)
+### 📌 Done on (11-08-2026)
 
-#### Database Setup
-- Creating MySQL database and table via schema script
-- JDBC URL, username, and password configuration
+- Learned REST Assured's Given / When / Then structure for automated API testing instead of manual
+Postman/curl checks.
+- Covered happy-path and unhappy-path tests, connecting directly to Day 7 status-code and validation behavior.
+- Learned JSON Server for mocking and enabling parallel frontend/backend development, and understood what it
+is not for.
+- Mapped Requirement, Design, Implementation, Testing, Deployment, and Maintenance to the course.
+- Compared Waterfall and Agile and understood why Agile is more common for evolving requirements.
+- Finished the Contacts App with a complete automated test suite, closing the Backend Basics phase of Days 5–8.
 
-#### Debugging & Tooling
-- Running Spring MVC apps via IntelliJ Community Edition using Smart Tomcat plugin
-- Resolving `NoSuchBeanDefinitionException` caused by incomplete component-scan
-- Resolving `No suitable driver found` error caused by missing dependency reload
-- Reading and interpreting Tomcat console logs and stack traces
+### 📂 Practice Project(Live Coding):
 
-### Practical Tasks
+- [College App](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-8/collegedb-app)
+- [ContactsApp-withTests](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-8/ContactsApp/src)
 
-- Extended the Greeting Application to support full CRUD operations
-- Created Greeting entity with id, name, and message fields
-- Built GreetingDao interface and GreetingDaoImpl using plain JDBC
-- Implemented addGreeting(), getAllGreetings(), getGreetingById(), updateGreeting(), and deleteGreeting() methods
-- Created DBConnection utility class using DriverManager
-- Built GreetingCrudController with endpoints for list, add, edit, and delete
-- Created greetings-list.jsp to display all records in a table with Edit and Delete links
-- Created a shared greetings-form.jsp used for both Add and Edit operations
-- Fixed a Spring bean creation failure by updating component-scan to cover the dao package
-- Fixed a JDBC driver error by adding mysql-connector-java dependency and reloading Maven
-- Ran and tested the CRUD application end-to-end on Apache Tomcat via IntelliJ (Smart Tomcat plugin)
-- Verified Add, Edit, and Delete operations reflect correctly in the MySQL database
+## Day 9 - Spring Boot Fundamentals
 
-## Day 7 - Spring Boot REST API & Contact Management
+### 📌 Done on (12-08-2026)
+- Spring Boot is built on top of Spring; it does not replace Spring Core or Spring MVC.
+- Auto-configuration is conditional and depends heavily on the classpath and application properties.
+- Spring Boot starters group commonly required dependencies into convenient Maven coordinates.
+- Embedded Tomcat allows a Spring Boot application to run as an executable JAR without a separately
+installedserver.
+- @RestController and @GetMapping belong to Spring MVC; Spring Boot provides the surrounding infrastructure.
+- Spring Initializr provides a practical way to create a correctly structured Spring Boot project.
+- The Contacts App can be extended with a search-by-name endpoint using the same Controller → Service → DAO
+flow learned earlier
 
-## Topics Covered
+### 📂 Projects:
+- [ContactsApp-FullySpringBoot](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-9/ContactsApp)
+- [EmployeePayrollApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-9/EmployeePayrollApp)
 
-* Spring Boot Fundamentals
-* REST API & HTTP Methods
-* `@RestController`, `@GetMapping`, `@PostMapping`, `@PatchMapping`, `@DeleteMapping`
-* Spring Data JPA & Hibernate
-* Entity, Repository, Service & Controller
-* DTO Pattern
-* MySQL Integration
-* Lombok
-* CRUD Operations
-* API Testing with Postman
+## Day 10 — Dependency Injection & H2 Database
 
-## Practical Tasks
+### 📌 Done on (13-08-2026)
 
-* Built a **Contact Management REST API** using Spring Boot.
-* Connected the application with **MySQL** using Spring Data JPA.
-* Created `Contact` entity with validation and unique constraints.
-* Implemented `ContactRepository` using `JpaRepository`.
-* Created Service and Controller layers following layered architecture.
-* Implemented CRUD APIs:
+- Revisited Dependency Injection from Day 5 with real-world cases: multiple bean implementations, circular dependencies, and how Spring resolves constructor arguments.
+- Learned how Spring resolves ambiguity between multiple beans of the same type using `@Primary` and `@Qualifier`.
+- Demonstrated bean resolution hands-on: created two `ContactDAO` implementations, triggered `NoUniqueBeanDefinitionException`, resolved it with `@Primary`, then overrode that default at a specific injection point using `@Qualifier`.
+- Studied circular dependencies — how to recognize them and redesign around them.
+- Understood H2 configuration modes and the H2 Console, applying Day 9's auto-configuration concepts to database setup.
+- Applied the same layered architecture to a second Spring Boot application (Employee Payroll App).
 
-  * `GET /contacts` – Get all contacts
-  * `GET /contact/{id}` – Get contact by ID
-  * `POST /contact` – Add contact
-  * `PATCH /contact/{id}` – Update contact
-  * `DELETE /contact/{id}` – Delete contact
-* Used DTOs for request and response handling.
-* Tested REST APIs using Postman.
+### 📂 Projects:
+- [EmployeePayrollApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-10/EmployeePayrollApp)
 
-# Day 8 - MySQL Database & SQL Queries
+---
 
-## Topics Covered
+## Day 11 — Spring Services, Spring JPA & Spring JDBC
 
-* Database & Table Creation
-* `CREATE DATABASE` and `USE`
-* `CREATE TABLE`
-* Primary Key & Auto Increment
-* `UNIQUE` and `NOT NULL` Constraints
-* `INSERT` Data
-* `SELECT` Queries
-* `ALTER TABLE`
-* `UPDATE` Queries
-* Aggregate Functions (`MAX`, `AVG`)
-* `GROUP BY`
-* Subqueries
-* Correlated Subqueries
-* SQL Safe Updates
-* `DESC` Command
+### 📌 Done on (14-08-2026)
 
+- Formalized the three-layer architecture — clearly defined what belongs in a Controller, a Service, and a DAO/Repository.
+- Practiced Spring REST API service-layer design.
+- Learned Spring JPA — repositories and entity mapping, including writing a Spring Data JPA repository interface with full CRUD and no implementation class required.
+- Learned Spring JDBC — template-based data access using `JdbcTemplate` for cases needing direct SQL control without hand-written JDBC boilerplate.
+- Compared three approaches to relational data access: hand-written JDBC, `JdbcTemplate`, and Spring Data JPA — and when to choose each based on the actual requirement.
+- Rebuilt the Employee Payroll App using Spring Data JPA, completing its CRUD endpoints (GET/PUT/DELETE by ID) with appropriate HTTP status codes and the Controller → Service → DAO separation intact.
+
+### 📂 Projects:
+- [EmployeePayrollApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-11/EmployeePayrollApp)
+
+Day 12 — Spring Bean Scopes, Logging, Maven & Postman
+📌 Done on (17-MM-2026)
+
+- Explained all four *Spring bean scopes* — `singleton`, `prototype`, `request`, `session` — and identified when each is appropriate.
+- Replaced System.out/System.err debugging with SLF4J/Logback logging across the codebase.
+- Understood Maven's dependency resolution and *build lifecycle* (validate → compile → test → package → verify → install → deploy) well enough to debug a broken build using dependency:tree.
+- Learned *Postman fundamentals* — collections, environments, variables, request chaining, and test assertions.
+- Built reusable Postman collections with environment variables, chained requests (e.g. passing a created id into subsequent Get/Update/Delete calls), and automated test assertions on status codes and response bodies.
+- Completed and fully tested the *Employee Payroll App* and *Address Book App backends* end-to-end via Postman.
+
+📂 Projects:
+
+- [EmployeePayrollApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-12/EmployeePayrollApp)
+- [AddressBookApp](https://github.com/imbhuvi1/BridgeLabz-Training/tree/Refresher_Training/Day-12/AddressBookApp)

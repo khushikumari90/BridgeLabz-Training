@@ -1,9 +1,0 @@
-CREATE DATABASE IF NOT EXISTS greeting_db;
-
-USE greeting_db;
-
-CREATE TABLE IF NOT EXISTS greetings (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    message VARCHAR(255) NOT NULL
-);

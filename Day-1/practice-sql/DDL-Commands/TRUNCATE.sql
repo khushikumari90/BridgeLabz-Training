@@ -1,0 +1,2 @@
+-- d) TRUNCATE
+TRUNCATE TABLE patients;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Greeting</title>
+</head>
+
+<body>
+
+<h1>Add New Greeting</h1>
+
+<form th:action="@{/greetings}" th:object="${greeting}" method="post">
+
+    <label>Message:</label>
+
+    <input type="text"
+           th:field="*{message}"
+           placeholder="Enter greeting">
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br>
+
+<a href="/greetings">Back to Greetings</a>
+
+</body>
+</html>

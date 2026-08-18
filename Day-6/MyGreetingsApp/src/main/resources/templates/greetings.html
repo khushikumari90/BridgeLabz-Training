@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Greetings App</title>
+</head>
+
+<body>
+
+<h1>My Greetings App</h1>
+
+<a href="/greetings/new">Add New Greeting</a>
+
+<hr>
+
+<h2>All Greetings</h2>
+
+<div th:if="${#lists.isEmpty(greetings)}">
+    <p>No greetings found.</p>
+</div>
+
+<table border="1" th:if="${not #lists.isEmpty(greetings)}">
+
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="greeting : ${greetings}">
+
+        <td th:text="${greeting.id}"></td>
+
+        <td th:text="${greeting.message}"></td>
+
+        <td>
+            <a th:href="@{/greetings/{id}(id=${greeting.id})}">
+                View
+            </a>
+
+            <a th:href="@{/greetings/edit/{id}(id=${greeting.id})}">
+                Edit
+            </a>
+
+            <a th:href="@{/greetings/delete/{id}(id=${greeting.id})}">
+                Delete
+            </a>
+        </td>
+
+    </tr>
+
+    </tbody>
+
+</table>
+
+</body>
+</html>
