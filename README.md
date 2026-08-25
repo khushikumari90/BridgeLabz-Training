@@ -173,7 +173,7 @@ that introduces.
 ### 📂 Projects:
 - [EmployeePayrollApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-11/EmployeePayrollApp)
 
-##Day 12 — Spring Bean Scopes, Logging, Maven & Postman
+## Day 12 — Spring Bean Scopes, Logging, Maven & Postman
 
 - Reviewed the four main *Spring bean scopes* — `singleton`, `prototype`, `request`, and `session` — and discussed their suitable use cases.
 - Replaced System.out/System.err debugging with SLF4J/Logback-based logging throughout the application.
@@ -187,7 +187,7 @@ that introduces.
 - [EmployeePayrollApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-12/EmployeePayrollApp)
 - [AddressBookApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-12/AddressBookApp)
 
-##Day 13 — Spring Security & JWT Authentication (Fundoo Notes App)
+## Day 13 — Spring Security & JWT Authentication (Fundoo Notes App)
 
 - Reviewed Spring Boot basics and understood *Spring Security* as a filter chain that processes requests before they reach Controllers.
 - Understood why an API without security controls can be accessed without credentials.
