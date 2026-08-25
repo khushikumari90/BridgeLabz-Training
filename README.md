@@ -246,3 +246,20 @@ that introduces.
 📂 Projects:
 
 - [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-16/FundooNotesApp)
+
+## Day 17 — Search & Filter, Reminders via JMS, Redis Token Caching
+
+- Learned how JPA `Specification` builds dynamic, composable queries instead of writing a separate repository method for every filter combination.
+- Implemented a single search endpoint combining title text (partial, case-insensitive), note state (pinned/archived/trashed/active), and label filters, with the owner predicate applied unconditionally so search parameters can never leak another user's notes.
+- Added a dedicated `getNotesListByLabel` shortcut endpoint alongside the general search.
+- Studied the JMS `JmsTemplate`/`@JmsListener` Producer-Consumer pattern and set up an embedded Artemis broker so the app runs without installing a separate message broker.
+- Modeled a note's reminders as a list of timestamps (`@ElementCollection<LocalDateTime>`) rather than a single date, since a note can have multiple reminders.
+- Built endpoints to add/update a reminder, remove a reminder, and list notes that currently have reminders set, confirming the response returns almost instantly while the Consumer processes the "real" work on its own thread.
+- Studied Redis as an in-memory cache and used it to cache JWT validation results so repeated requests with the same token skip redundant cryptographic checks.
+- Learned why cache TTL must be derived from the token's own remaining expiry, so a cache entry can never outlive the JWT itself.
+- Verified the caching behavior end to end — first request is a cache MISS, subsequent requests with the same token are cache HITs.
+- Added UC7 (Search & Filter with Specification), UC8 (Reminders via JMS), and UC9 (Redis Token Caching) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-17/FundooNotesApp)
