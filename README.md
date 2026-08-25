@@ -192,12 +192,57 @@ that introduces.
 - Reviewed Spring Boot basics and understood *Spring Security* as a filter chain that processes requests before they reach Controllers.
 - Understood why an API without security controls can be accessed without credentials.
 - Clearly differentiated `authentication` ("who are you?") from `authorization` ("what are you allowed to do?").
-- Configured a `SecurityFilterChain` to secure protected endpoints while keeping /auth/register and /auth/login publicly accessible.
+- Configured a `SecurityFilterChain` to secure protected endpoints while keeping /user/userSignUp and /user/login publicly accessible.
 - Studied the `JWT structure` — header, payload, and signature — and implemented JWT creation and validation.
 - Understood why `stateless` *JWT authentication* fits REST APIs by avoiding server-side session storage.
 - Used `BCrypt` hashing to store passwords more securely.
-- Developed the `Fundoo Notes App` user-management module with registration and login protected through BCrypt and JWT.
+- Set up the Fundoo Notes App project with MySQL (UC1), built user registration and login with JWT (UC2), and added a `JwtAuthFilter` so every endpoint except register/login requires a valid token (UC3).
 
 📂 Projects:
 
 - [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-13/FundooNotesApp)
+
+---
+
+## Day 14 — Notes CRUD with Ownership
+
+- Designed the `Note` entity covering title, description, pin/archive/trash flags, color, note type, and owner.
+- Built full CRUD for notes — create, list, get by id, update, and delete — scoped to the logged-in user only.
+- Implemented ownership checks at the repository layer so one user can never read, update, or delete another user's notes.
+- Applied the "return 404, not 403" rule for unauthorized note access, so a request doesn't reveal whether a note exists.
+- Read the current user's identity from `SecurityContextHolder` (populated by Day 13's `JwtAuthFilter`) instead of trusting a request parameter.
+- Added UC4 (Notes CRUD with Ownership) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-14/FundooNotesApp)
+
+---
+
+## Day 15 — Pin / Archive / Trash
+
+- Implemented state-transition business rules for notes: pin/unpin, archive/unarchive, and trash.
+- Enforced that trashing a note automatically un-pins and un-archives it.
+- Rejected invalid transitions (e.g., pinning a trashed note) with a clean `400` instead of allowing them silently.
+- Separated soft-delete (`trashNotes`) from genuine hard-delete (`deleteForeverNotes`), matching a two-tier deletion model.
+- Added dedicated list endpoints for archived and trashed notes that correctly exclude notes in other states.
+- Added UC5 (Pin/Archive/Trash) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-15/FundooNotesApp)
+
+---
+
+## Day 16 — Labels/Tags Management
+
+- Designed the `NoteLabel` entity with a soft-delete flag, and connected it to `Note` via a `@ManyToMany` relationship.
+- Built label CRUD — create, rename, soft-delete, and list — scoped to the logged-in user.
+- Implemented per-user label uniqueness (two users can each have a "Work" label, but one user can't have duplicates), handled in the Service layer since a plain unique column can't express a per-user constraint.
+- Added endpoints to attach and remove a label on a specific note without deleting the label itself.
+- Confirmed soft-deleted labels are excluded from the label list while remaining in the database.
+- Added UC6 (Labels/Tags Management) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-16/FundooNotesApp)
