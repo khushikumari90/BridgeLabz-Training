@@ -263,3 +263,16 @@ that introduces.
 📂 Projects:
 
 - [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-17/FundooNotesApp)
+
+## Day 18 — RabbitMQ: A Second Messaging Path
+
+- Learned the difference between JMS's direct queue model (Day 18's reminders) and RabbitMQ's Exchange-based routing, and why note-sharing events are a better fit for an Exchange.
+- Set up a Topic Exchange with a routing key, understanding how an Exchange lets any number of consumers subscribe to the same event independently.
+- Built a Producer that publishes a "note shared" event without knowing or caring which consumers exist.
+- Added a second, completely independent consumer bound to the same exchange/routing key, with zero changes to the Producer — a concrete demonstration of the decoupling an Exchange provides over a direct queue.
+- Since Collaborators (a later use case) doesn't exist yet, stubbed a minimal share-trigger endpoint just to exercise the messaging path end to end.
+- Added UC10 (RabbitMQ — A Second Messaging Path) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-18/FundooNotesApp)
