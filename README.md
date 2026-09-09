@@ -276,3 +276,17 @@ that introduces.
 📂 Projects:
 
 - [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-18/FundooNotesApp)
+
+## Day 19 — Spring Batch: Excel Import/Export
+
+- Learned when Spring Batch's chunk-based Reader/Processor/Writer pattern is worth the overhead versus a plain synchronous approach.
+- Built a custom Excel `ItemReader` using Apache POI, reading rows out of an uploaded `.xlsx` file one at a time.
+- Wrote an `ItemProcessor` that validates each row and skips deliberately invalid ones (blank titles) instead of writing them.
+- Ran a real chunked Step (chunk size 100) and confirmed accurate read/write/skip counts on a 50-row test file with some invalid rows mixed in.
+- Understood why the export side does NOT need Spring Batch — a single user's notes is a small, bounded dataset, so a direct Apache POI write is simpler and just as correct.
+- Verified the exported file is a real, openable `.xlsx` with correct headers and data.
+- Added UC11 (Spring Batch — Excel Import/Export) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-19/FundooNotesApp)
