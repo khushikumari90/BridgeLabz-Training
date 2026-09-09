@@ -200,7 +200,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-13/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-13/fundoo-notes-app)
 
 ---
 
@@ -215,7 +215,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-14/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-14/fundoo-notes-app)
 
 ---
 
@@ -230,7 +230,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-15/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-15/fundoo-notes-app)
 
 ---
 
@@ -245,7 +245,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-16/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-16/fundoo-notes-app)
 
 ## Day 17 — Search & Filter, Reminders via JMS, Redis Token Caching
 
@@ -262,7 +262,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-17/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-17/fundoo-notes-app)
 
 ## Day 18 — RabbitMQ: A Second Messaging Path
 
@@ -275,7 +275,7 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-18/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-18/fundoo-notes-app)
 
 ## Day 19 — Spring Batch: Excel Import/Export
 
@@ -289,4 +289,17 @@ that introduces.
 
 📂 Projects:
 
-- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-19/FundooNotesApp)
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-19/fundoo-notes-app)
+
+## Day 20 — Checklist Items on Notes
+
+- Extended the Note domain with title-less "to-do" sub-items, applying the same relationship patterns used for Labels (Day 16).
+- Modeled checklist items with their own status field (`PENDING`/`DONE`) and a soft-delete flag, matching the existing soft-delete convention.
+- Enforced ownership entirely through the parent note rather than adding a separate owner field on the checklist item — an item's implicit owner is always whoever owns the note it belongs to.
+- Built a bulk "mark all complete" endpoint updating multiple checklist items in a single transaction, good practice combining several entity updates at once.
+- Verified a checklist item can't be read, updated, or deleted through a note that doesn't belong to the current user.
+- Added UC12 (Checklist Items on Notes) to the Fundoo Notes App.
+
+📂 Projects:
+
+- [FundooNotesApp](https://github.com/khushikumari90/BridgeLabz-Training/tree/Refresher-Training/Day-20/fundoo-notes-app)
